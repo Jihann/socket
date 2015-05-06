@@ -13,6 +13,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+//modify from ejs to html
 app.engine('.html', ejs.__express);
 app.set('view engine', 'html');
 

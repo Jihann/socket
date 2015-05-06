@@ -21,10 +21,11 @@ router.get('/login', function(req, res) {
 //login
 router.post('/login', function(req, res) {
   var username = req.body.name;
-  if(users[username]) {
+  console.log('-------------username：' + username);
+  if(username == null || username == '') {
     res.redirect('/login');
   }else {
-    res.cookie('user', username, {maxAge: 1000*60*60*24*30});
+    res.cookie('user', username, {maxAge: 1000 * 60 * 60 * 24 * 30});
     res.redirect('/');
   }
 });
