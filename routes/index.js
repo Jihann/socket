@@ -1,9 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-//在线用户
-var users = {};
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   if (req.cookies.user == null) {
